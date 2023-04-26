@@ -1,5 +1,3 @@
-//Author: Jay Ramani(jy948858@dal.ca) || Banner Id : B00911903
-
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { FaSearch } from 'react-icons/fa';

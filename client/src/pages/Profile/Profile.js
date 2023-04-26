@@ -1,6 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-//Author: Dhrupa Patel(dh409430@dal.ca) || Banner Id: B00912610
-
 import React, { useState, useEffect } from 'react';
 import { ProfilePic } from '../../components';
 import { LiveUpdateImage } from '../../components';
@@ -36,9 +33,6 @@ const Profile = () => {
 	const dataProfile = JSON.parse(localStorage.getItem('profileData'));
 
 	useEffect(() => {
-		// fetch all posts of particular users
-		// Also code included if I would have got user data from user authentication
-		// Therefore added static data of user
 		axios
 			.get(`https://trip-ease-server.onrender.com/post/view/${123}`)
 			// .get(`https://trip-ease-server.onrender.com/post/view/${props.userId}`)

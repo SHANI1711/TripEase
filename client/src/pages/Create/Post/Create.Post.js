@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 import React, { useEffect, useState } from 'react';
 import { InputField } from '../../../components';
 import { Button } from '../../../components';
@@ -12,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function CreatePost() {
 	const initialValues = {
-		// Static data given, because user data did not came from authentication module!!
 		userId: 123,
 		// userId: props.userId,
 		userName: 'Shani',

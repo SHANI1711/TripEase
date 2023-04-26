@@ -1,5 +1,3 @@
-//Author: Jay Ramani(jy948858@dal.ca) || Banner Id : B00911903
-
 import React, { useState, useEffect } from 'react';
 import { Button, InputField } from '..';
 import '../PopUp/EditPlanPopup.styles.css';
@@ -10,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { changeUpdateStatus } from '../../redux/planupdate.reducer';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 
 const EditPlanPopup = (props) => {
 	const dispatch = useDispatch();
@@ -26,19 +24,19 @@ const EditPlanPopup = (props) => {
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState(initialValues);
 	const [planDetails, setPlanDetails] = useState({});
-	
+
 	const navigate = useNavigate();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		console.log(name,value);
+		console.log(name, value);
 		setFormValues({ ...formValues, [name]: value });
 	};
 
 	const handleSave = (e) => {
 		e.preventDefault();
 		setFormErrors(validate(formValues));
-		console.log(Object.keys(formErrors).length)
+		console.log(Object.keys(formErrors).length);
 		if (Object.keys(formErrors).length === 0) {
 			// setFormValues(initialValues);
 			// setFormErrors(initialValues);
@@ -77,18 +75,17 @@ const EditPlanPopup = (props) => {
 				.then((response) => {
 					if (response.data.status === 'ok') {
 						dispatch(changeUpdateStatus());
-						toast.success("Your Plan Updated Successfully!!", {
-              				position: "top-right",
-             				autoClose: 3000,
-              				hideProgressBar: false,
-              				closeOnClick: true,
-              				pauseOnHover: true,
-              				draggable: true,
-              				progress: undefined,
-              				theme: "light",
-            			});
+						toast.success('Your Plan Updated Successfully!!', {
+							position: 'top-right',
+							autoClose: 3000,
+							hideProgressBar: false,
+							closeOnClick: true,
+							pauseOnHover: true,
+							draggable: true,
+							progress: undefined,
+							theme: 'light',
+						});
 						navigate('/plan');
-
 					}
 				})
 				.catch((error) => {
@@ -167,9 +164,7 @@ const EditPlanPopup = (props) => {
 					</div>
 				</div>
 				<hr />
-				<div
-					className="popup-input-list"
-				>
+				<div className="popup-input-list">
 					<div className="name-in-plan">
 						<InputField
 							type="text"
@@ -217,12 +212,12 @@ const EditPlanPopup = (props) => {
 						placeholder={planDetails.travelDescription}
 					/>
 					<div className="popup-update-button">
-					<Button
-						onClick={handleSave}
-						type="submit"
-						variant="blue"
-						name="Update"
-					/>
+						<Button
+							onClick={handleSave}
+							type="submit"
+							variant="blue"
+							name="Update"
+						/>
 					</div>
 				</div>
 			</div>

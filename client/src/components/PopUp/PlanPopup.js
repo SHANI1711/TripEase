@@ -1,5 +1,3 @@
-//Author: Jay Ramani(jy948858@dal.ca) || Banner Id : B00911903
-
 import React, { useState, useEffect } from 'react';
 import '../PopUp/EditPlanPopup.styles.css';
 import { IoCloseCircleOutline } from 'react-icons/io5';

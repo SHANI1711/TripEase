@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

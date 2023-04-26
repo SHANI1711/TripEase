@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 const express = require('express');
 const liveUpdateController = require('../Controllers/liveUpdate.controller');
 const router = express.Router();

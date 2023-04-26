@@ -1,31 +1,29 @@
-//Author: Jainil Sevalia(jn498899@dal.ca) || Banner Id: B00925445
-
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const tripSchema = mongoose.Schema({
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
-  },
-  tripName: {
-    type: String,
-    require: true,
-  },
-  tripDescription: {
-    type: String,
-    require: true,
-  },
-  tripDate: {
-    type: String,
-    require: true,
-  },
-  initialBudget: {
-    type: Number,
-    require: true,
-  },
-  totalExpense: {
-    type: Number,
-  },
+	userId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'user',
+	},
+	tripName: {
+		type: String,
+		require: true,
+	},
+	tripDescription: {
+		type: String,
+		require: true,
+	},
+	tripDate: {
+		type: String,
+		require: true,
+	},
+	initialBudget: {
+		type: Number,
+		require: true,
+	},
+	totalExpense: {
+		type: Number,
+	},
 });
 
-module.exports = mongoose.model("trip", tripSchema);
+module.exports = mongoose.model('trip', tripSchema);

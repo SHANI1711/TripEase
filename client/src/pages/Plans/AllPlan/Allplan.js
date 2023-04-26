@@ -1,5 +1,3 @@
-//Author: Jay Ramani(jy948858@dal.ca) || Banner Id : B00911903
-
 import React, { useState, useEffect } from 'react';
 import { MdEditNote } from 'react-icons/md';
 import { MdDeleteOutline } from 'react-icons/md';
@@ -13,7 +11,7 @@ import PlanPopup from '../../../components/PopUp/PlanPopup';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
-import {MdOutlineEmail} from "react-icons/md"
+import { MdOutlineEmail } from 'react-icons/md';
 
 const AllPlan = (props) => {
 	const [plans, setPlans] = useState([]);
@@ -52,35 +50,32 @@ const AllPlan = (props) => {
 		setShowAll(!showAll);
 	}
 
-	const sendEmail = async (email,name) => {
-
-		let message = "Confirm sending an email to join "+name+"'s plan?";
-        if(window.confirm(message)===true){
-
-		await axios({
-			method:'post',
-			url:'https://trip-ease-server.onrender.com/plan/mail/sendmail',
-			data:{
-				to:email,
-			},
-			headers: { 'Content-Type': 'application/json' },
-
-		}).then((res)=>{
-			if(res.data.success){
-			toast.success("Email sent successfully!!", {
-              position: "top-right",
-              autoClose: 3000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
-			}
-		})		
-		}			
-	}
+	const sendEmail = async (email, name) => {
+		let message = 'Confirm sending an email to join ' + name + "'s plan?";
+		if (window.confirm(message) === true) {
+			await axios({
+				method: 'post',
+				url: 'https://trip-ease-server.onrender.com/plan/mail/sendmail',
+				data: {
+					to: email,
+				},
+				headers: { 'Content-Type': 'application/json' },
+			}).then((res) => {
+				if (res.data.success) {
+					toast.success('Email sent successfully!!', {
+						position: 'top-right',
+						autoClose: 3000,
+						hideProgressBar: false,
+						closeOnClick: true,
+						pauseOnHover: true,
+						draggable: true,
+						progress: undefined,
+						theme: 'light',
+					});
+				}
+			});
+		}
+	};
 
 	function deleteFunction(data) {
 		return function () {
@@ -172,7 +167,6 @@ const AllPlan = (props) => {
 													trigger={popupVisible}
 													setTrigger={setPopupVisible}
 													planId={planId}
-													
 												></EditPlanPopup>
 
 												<div
@@ -206,7 +200,6 @@ const AllPlan = (props) => {
 							))}
 						{displayCount < items.length && (
 							<div className="show-all-less">
-
 								<Button
 									// className="show-all-less-button"
 									variant="grey"
@@ -261,7 +254,11 @@ const AllPlan = (props) => {
 										/>
 
 										<div className="message">
-											<MdOutlineEmail onClick={()=>{sendEmail(plan.email,plan.firstName)}}/>
+											<MdOutlineEmail
+												onClick={() => {
+													sendEmail(plan.email, plan.firstName);
+												}}
+											/>
 										</div>
 									</div>
 								</div>

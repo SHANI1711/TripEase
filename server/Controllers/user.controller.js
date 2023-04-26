@@ -1,6 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-//Author: Dhrupa Patel(dh409430@dal.ca) || Banner Id: B00912610
-
 const User = require('../Models/user.model');
 
 const viewUser = (req, res) => {
@@ -51,41 +48,41 @@ const createUser = (req, res) => {
 };
 
 const getUserBySearch = async (req, res) => {
-	console.log(req.query.q, "search");
-	const searchVal = req.query.q || "";
+	console.log(req.query.q, 'search');
+	const searchVal = req.query.q || '';
 	try {
-	  const plan = await User.find({
-		userName: { $regex: searchVal },
-	  });
-	  res.json(plan);
+		const plan = await User.find({
+			userName: { $regex: searchVal },
+		});
+		res.json(plan);
 	} catch (err) {
-	  res.status(500).json({ message: err.message });
+		res.status(500).json({ message: err.message });
 	}
-  };
+};
 
-  const updateUserById = (req, res) => {
+const updateUserById = (req, res) => {
 	const userId = req.params.id;
 	const uReq = req.body;
-  
+
 	const getUser = async () => {
-	  await User.findById(userId)
-		.then((_) => {
-		  User.updateOne({ _id: userId }, { $set: uReq })
+		await User.findById(userId)
 			.then((_) => {
-			  res.json({ status: "OK", message: "Successfully updated" });
+				User.updateOne({ _id: userId }, { $set: uReq })
+					.then((_) => {
+						res.json({ status: 'OK', message: 'Successfully updated' });
+					})
+					.catch((err) => {
+						res.json({ status: 'Err', message: 'Something went wrong' });
+						console.log(err);
+					});
 			})
-			.catch((err) => {
-			  res.json({ status: "Err", message: "Something went wrong" });
-			  console.log(err);
-			});
-		})
-		.catch((err) => {});
+			.catch((err) => {});
 	};
-  
+
 	getUser().catch((err) => {
-	  res.json({ message: "User Not Found" });
+		res.json({ message: 'User Not Found' });
 	});
-  };
+};
 
 module.exports = {
 	viewUser,

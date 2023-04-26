@@ -1,5 +1,3 @@
-//Author: Jay Ramani(jy948858@dal.ca) || Banner Id : B00911903
-
 import React, { useState, useEffect } from 'react';
 import './CreatePlan.css';
 import '../../../components/Navbar/Navbar';
@@ -21,7 +19,6 @@ function Plan() {
 		estimatedExpenses: '',
 		travelDescription: '',
 	};
-
 
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState(initialValues);

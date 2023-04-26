@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({

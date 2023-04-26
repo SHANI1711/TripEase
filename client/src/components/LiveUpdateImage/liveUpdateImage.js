@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 import React, { useState, useEffect } from 'react';
 import './liveUpdateImage.css';
 

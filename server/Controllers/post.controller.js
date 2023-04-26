@@ -1,5 +1,3 @@
-//Author: Shani Kachhadiya(sh248902@dal.ca) || Banner Id : B00917757
-
 const Post = require('../Models/post.model');
 
 // view all posts from database
