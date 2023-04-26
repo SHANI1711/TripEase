@@ -2,7 +2,11 @@
 
 ### A platform for travel enthusiasts to share content and upcoming trip plans with the community, manage and pay their trip expenses and explore new travel destinations.
 
-### [Live Application](https://tripeasego.netlify.app/)
+### TripEase is a web application designed to make travel planning and management more convenient and efficient for users. The goal is to provide travel enthusiasts with a platform where they can plan and organize their trips with ease, while also facilitating collaboration among friends and family members who may be traveling together. We understand that travel can be a time-consuming and stressful experience, which is why we want to simplify the process by offering features that streamline the planning and management of trips.
+
+### [Live Application Link](https://tripeasego.netlify.app/)
+
+## User Interface
 
 ### User Profile
 
