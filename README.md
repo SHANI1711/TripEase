@@ -135,8 +135,6 @@ I implemented an MVC (Model-View-Controller) architecture, consisting of three p
 
 # **Softwrae/Library/plug-in used**
 
-To have a local copy of this lab / assingnment / project up and running on your local machine, you will first need to install the following software / libraries / plug-ins
-
 - [VS Code](https://code.visualstudio.com/)
 - [Node](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
