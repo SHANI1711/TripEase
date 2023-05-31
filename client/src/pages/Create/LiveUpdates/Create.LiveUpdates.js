@@ -10,11 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const CreateLiveUpdates = () => {
 	const initialValues = {
 		userId: 123,
-		// userId: props.userId,
 		userName: 'Shani',
-		// userName: props.userName,
 		liveUpdate: '',
-		// liveUpdate: props.liveUpdate,
 	};
 
 	const [formValues, setFormValues] = useState(initialValues);
@@ -60,9 +57,7 @@ const CreateLiveUpdates = () => {
 						},
 					}
 				)
-				.then(function (response) {
-					// dispatch(createPost(formValues));
-				});
+				.then(function (response) {});
 			setIsSubmit(true);
 			toast.success('Live Update Created successfully!!', {
 				position: 'top-right',

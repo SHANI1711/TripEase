@@ -77,9 +77,7 @@ function Plan() {
 							navigate('/plan');
 						}
 					})
-					.catch((error) => {
-						// alert(error);
-					});
+					.catch((error) => {});
 			})();
 		}
 	}, [isSubmit, navigate, formValues, errorCheck]);

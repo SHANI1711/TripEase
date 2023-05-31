@@ -18,7 +18,6 @@ const EditTripPopUp = (props) => {
 		tripDescription: '',
 		tripDate: '',
 		initialBudget: '',
-		// totalExpense: 0,
 	};
 
 	const [formValues, setFormValues] = useState(initialValues);
@@ -77,7 +76,6 @@ const EditTripPopUp = (props) => {
 			try {
 				axios
 					.patch(`/trip/update/${props.selectedTripCard._id}`, {
-						// TODO: Remove user ID
 						userId: '64147ef19c2f3ba112246a4f',
 						tripName: values.tripName,
 						tripDescription: values.tripDescription,
@@ -122,7 +120,6 @@ const EditTripPopUp = (props) => {
 			try {
 				axios
 					.patch(`/trip/update/${props.selectedTripCard}`, {
-						// TODO: Remove user ID
 						userId: '64147ef19c2f3ba112246a4f',
 						tripName: formValues.tripName,
 						tripDescription: formValues.tripDescription,

@@ -17,9 +17,7 @@ const PlanPopup = (props) => {
 			.then((response) => {
 				setPlanDetails(response.data);
 			})
-			.catch((error) => {
-				// alert(error);
-			});
+			.catch((error) => {});
 	}, [props]);
 
 	return props.trigger ? (

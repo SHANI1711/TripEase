@@ -11,9 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function CreatePost() {
 	const initialValues = {
 		userId: 123,
-		// userId: props.userId,
 		userName: 'Shani',
-		// userName: props.userName,
 		postImage: '',
 		location: '',
 		description: '',
@@ -115,9 +113,7 @@ function CreatePost() {
 							},
 						}
 					)
-					.then(function (response) {
-						// dispatch(createPost(formValues));
-					});
+					.then(function (response) {});
 
 				setIsSubmit(true);
 			} else {

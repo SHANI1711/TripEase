@@ -1,5 +1,3 @@
-//Author: Maitri Savla(mt588638@dal.ca) || Banner Id : B00899569
-
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Style.css';
@@ -34,9 +32,9 @@ function Login() {
 		}
 
 		Axios.post('https://trip-ease-server.onrender.com/login', {
-        emailid:formValues.email,
-        pass:formValues.password
-    })
+			emailid: formValues.email,
+			pass: formValues.password,
+		});
 	}, [formErrors, isSubmit, nav]);
 
 	const validate = (values) => {

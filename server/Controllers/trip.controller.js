@@ -4,9 +4,6 @@ const Expense = require('../Models/expense.model');
 exports.addTrip = async (req, res) => {
 	try {
 		const trip = await Trip.create({
-			// TODO: add user from middleware
-			// userId : req.user.userId,
-
 			userId: req.body.userId,
 			tripName: req.body.tripName,
 			tripDescription: req.body.tripDescription,
@@ -23,7 +20,6 @@ exports.addTrip = async (req, res) => {
 };
 
 exports.getAllTrip = async (req, res) => {
-	// TODO: Need user Id for get
 	const user_id = '64147ef19c2f3ba112246a4f';
 	try {
 		if (user_id == null) {

@@ -32,8 +32,6 @@ const ChangePassword = () => {
 		validationSchema,
 		onSubmit: async (values) => {
 			setIsSubmitting(true);
-			// Make API call to change password endpoint with values.currentPassword, values.newPassword and values.confirmNewPassword
-			// Reset form and display success message if successful, display error message if not
 			setIsSubmitting(false);
 			onClose();
 		},

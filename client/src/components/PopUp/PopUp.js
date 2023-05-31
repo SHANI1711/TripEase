@@ -35,7 +35,6 @@ const PopUp = (props) => {
 			try {
 				axios
 					.post('/trip/add', {
-						// TODO: Remove user ID
 						userId: '64147ef19c2f3ba112246a4f',
 						tripName: values.tripName,
 						tripDescription: values.tripDescription,

@@ -1,5 +1,3 @@
-//Author: Maitri Savla(mt588638@dal.ca) || Banner Id : B00899569
-
 import { useState, useEffect } from 'react';
 import './Style.css';
 import React from 'react';
@@ -16,7 +14,6 @@ function RegistrationForm() {
 		cnfpassword: '',
 	};
 
-	//Reference: https://www.telerik.com/blogs/how-to-create-validate-react-form-hooks
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
@@ -26,7 +23,7 @@ function RegistrationForm() {
 		const { name, value } = e.target;
 		setFormValues({ ...formValues, [name]: value });
 	};
-	// Reference: code from my previous serverless assignment
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setFormErrors(validate(formValues));
@@ -41,18 +38,17 @@ function RegistrationForm() {
 		}
 
 		Axios.post('https://trip-ease-server.onrender.com/register', {
-        firstname:formValues.fname,
-        lastname:formValues.lname,
-        emailid:formValues.email,
-        pass:formValues.password
-    })
+			firstname: formValues.fname,
+			lastname: formValues.lname,
+			emailid: formValues.email,
+			pass: formValues.password,
+		});
 	}, [formErrors, isSubmit, nav]);
-
 
 	const validate = (values) => {
 		const errors = {};
 		const txtreg = /^[a-zA-Z]*$/;
-		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i; //Reference: https://www.w3schools.blog/email-validation-javascript-js
+		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 		if (!values.fname) {
 			errors.fname = 'First name is required!';
 		} else if (!txtreg.test(values.fname)) {

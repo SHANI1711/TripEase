@@ -38,9 +38,6 @@ const EditPlanPopup = (props) => {
 		setFormErrors(validate(formValues));
 		console.log(Object.keys(formErrors).length);
 		if (Object.keys(formErrors).length === 0) {
-			// setFormValues(initialValues);
-			// setFormErrors(initialValues);
-			// setPlanDetails({});
 			props.setTrigger(false);
 
 			axios
@@ -88,9 +85,7 @@ const EditPlanPopup = (props) => {
 						navigate('/plan');
 					}
 				})
-				.catch((error) => {
-					// alert(error)
-				});
+				.catch((error) => {});
 		}
 	};
 

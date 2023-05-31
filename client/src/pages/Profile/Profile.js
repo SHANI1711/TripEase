@@ -69,11 +69,9 @@ const Profile = () => {
 						<ProfilePic
 							size="large"
 							image_url="/Images/profilePic.jpg"
-							// image_url={props.userProfileImage}
 						/>
 					</div>
 					<div className="userName_in_profile_page">
-						{/* <h1 className="userName">Shani Kachhadiya</h1> */}
 						<h1 className="userName">{dataProfile?.name}</h1>
 						<div className="location_img_and_location">
 							<img
@@ -81,7 +79,6 @@ const Profile = () => {
 								src="./Images/location.jpg"
 								alt="location"
 							/>
-							{/* <span className="location">Halifax, CA</span> */}
 							<span className="location">{dataProfile?.location}</span>
 						</div>
 						<div className="instagram_img_and_userName">
@@ -90,14 +87,10 @@ const Profile = () => {
 								src="./Images/instagram.png"
 								alt="instagram"
 							/>
-							{/* <span className="insta_userName">shani.kachhadiya</span> */}
 							<span className="insta_userName">{dataProfile?.socialMedia}</span>
 						</div>
 						<div className="bio">
-							<span className="bio_text">
-								{/* Leaving a bit of sparkle everywhere I go ✨ */}
-								{dataProfile?.bio}
-							</span>
+							<span className="bio_text">{dataProfile?.bio}</span>
 						</div>
 					</div>
 					<div className="profile_edit_button_in_profile_page">

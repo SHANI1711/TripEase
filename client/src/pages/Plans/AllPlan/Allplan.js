@@ -201,7 +201,6 @@ const AllPlan = (props) => {
 						{displayCount < items.length && (
 							<div className="show-all-less">
 								<Button
-									// className="show-all-less-button"
 									variant="grey"
 									name="Load more"
 									onClick={handleShowAll}
@@ -211,7 +210,6 @@ const AllPlan = (props) => {
 						{displayCount >= items.length && (
 							<div className="show-all-less">
 								<Button
-									// className="show-all-less-button"
 									variant="grey"
 									name="Show Less"
 									onClick={handleShowLess}

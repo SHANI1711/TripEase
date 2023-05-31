@@ -59,7 +59,6 @@ const Feed = () => {
 			<div className="feed_container-post_div">
 				{post.postData.map((post, i) => (
 					<Post
-						// post={post}
 						type="feed_post"
 						userName={post.userName}
 						location={post.location}

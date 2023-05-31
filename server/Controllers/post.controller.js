@@ -47,7 +47,6 @@ const deletePostByPostId = (req, res) => {
 		const updatedPost = await Post.find({ userId: '123' });
 		if (data !== undefined) {
 			res.json(updatedPost);
-			// res.json(updatedPost);
 		} else {
 			res.send('No post found with given ID');
 		}

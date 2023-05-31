@@ -143,8 +143,6 @@ const Post = (props) => {
 							<ProfilePic
 								size="small"
 								image_url="/Images/shani.jpg"
-								// Static data given, because user ID is not coming from authentication module yet!!
-								// image_url={props.ProfilePic}
 							/>
 						</div>
 						<div className="user_name_and_location_in_post">
@@ -163,7 +161,6 @@ const Post = (props) => {
 					<div className="post_description">
 						<div className="user_name_and_description">
 							<div>
-								{/* slice description and put show more button */}
 								{showAll
 									? props.description
 									: `${props.description.slice(0, 260)}...`}

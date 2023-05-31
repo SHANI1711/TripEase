@@ -7,7 +7,6 @@ const InputField = ({
 	handleChange,
 	error,
 	info,
-	// handleDisabledButton,
 	...otherProps
 }) => {
 	const [isFilled, setIsFilled] = useState(false);
@@ -26,7 +25,6 @@ const InputField = ({
 							: setIsFilled(false);
 					}}
 					onBlur={(e) => {
-						// handleDisabledButton();
 						otherProps.value?.length !== 0
 							? setIsFilled(true)
 							: setIsFilled(false);

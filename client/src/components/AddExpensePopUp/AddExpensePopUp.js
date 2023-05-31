@@ -19,16 +19,13 @@ const AddExpensePopUp = (props) => {
 		transactionAmount: '',
 	};
 	const [formValues, setFormValues] = useState(initialValues);
-	// const [formErrors, setFormErrors] = useState();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormValues({ ...formValues, [name]: value });
-		// handleError();
 	};
 
 	const handlePayExpense = () => {
-		// if (handleError()) return;
 		axios
 			.post('/expense/add', {
 				tripId: selectedTripId.tripIdSelected,
@@ -126,25 +123,7 @@ const AddExpensePopUp = (props) => {
 
 	const dispatch = useDispatch();
 
-	// const handleError = () => {
-	//   const requiredMsg = "This field is mandatory";
-	//   const { transactionName, transactionAmount } = formValues;
-	//   let isError = true;
-	//   if (!transactionName) {
-	//     setFormErrors({ ...formErrors, transactionName: requiredMsg });
-	//   } else if (!transactionAmount) {
-	//     setFormErrors({ ...formErrors, transactionAmount: requiredMsg });
-	//   } else if (transactionAmount && isNaN(Number(transactionAmount))) {
-	//     setFormErrors({ ...formErrors, transactionAmount: "Invalid number" });
-	//   } else {
-	//     setFormErrors();
-	//     isError = false;
-	//   }
-	//   return isError;
-	// };
-
 	const handleTransactionSave = () => {
-		// if (handleError()) return;
 		axios
 			.post('/expense/add', {
 				tripId: selectedTripId.tripIdSelected,
@@ -179,7 +158,7 @@ const AddExpensePopUp = (props) => {
 					});
 				}
 			});
-		// }
+}
 	};
 
 	return props.trigger ? (
@@ -208,7 +187,6 @@ const AddExpensePopUp = (props) => {
 						name="transactionName"
 						required
 						handleChange={handleChange}
-						// error={formErrors?.transactionName}
 					/>
 					<InputField
 						label="Expense Amount"
@@ -218,7 +196,6 @@ const AddExpensePopUp = (props) => {
 						required
 						pattern="^[0-9]*$"
 						handleChange={handleChange}
-						// error={formErrors?.transactionAmount}
 					/>
 					<div className="popup-save-and-pay-button">
 						<Button
